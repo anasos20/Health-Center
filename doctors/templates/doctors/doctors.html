@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-
+{% block title %} <title> Doctors</title> {% endblock title %}
 {% block content %}
 <!-- TEAM -->
 <section id="team" data-stellar-background-ratio="1">
@@ -23,6 +23,7 @@
                              <div class="team-info">
                                   <h3>{{ doc.name }}</h3>
                                   <p>{{ doc.title }}</p>
+                                  <p>{{ doc.department }}</p>
                                   <div class="team-contact-info">
                                        <p><i class="fa fa-phone"></i> {{ doc.phone }}</p>
                                        <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
