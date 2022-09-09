@@ -3,6 +3,7 @@ from re import T
 from tkinter.tix import Tree
 from django.db import models
 from doctors.models import Doctor
+from django.urls import reverse
 # Create your models here.
 
 
@@ -16,3 +17,6 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('new_detail', kwargs={'pk': self.pk})

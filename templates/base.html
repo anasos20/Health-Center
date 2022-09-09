@@ -4,8 +4,8 @@
 
 <head>
 
-    {% block title %} <title> Health - Medical Website Template </title>{% endblock title %}
-<!--
+     {% block title %} <title> Health - Medical Website Template </title>{% endblock title %}
+     <!--
 
 Template 2098 Health
 
@@ -88,6 +88,12 @@ http://www.tooplate.com/view/2098-health
                          <li><a href="{% url 'news' %}" class="smoothScroll">News</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li>
                          <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li>
+                         {% if user.is_authenticated %}
+                         <li class="appointment-btn"><a href="{% url 'logout' %}">Logout</a></li>
+                         {% else %}
+                         <li class="appointment-btn"><a href="#appointment">SignUp</a></li>
+                         <li class="appointment-btn"><a href="{% url 'login' %}">Login</a></li>
+                         {% endif %}
                     </ul>
                </div>
 
