@@ -19,11 +19,11 @@
                 <!-- NEWS THUMB -->
                 <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
                     <a href="/">
-                        <img src="images/news-image1.jpg" class="img-responsive" alt="">
+                        <img src="{{new.pic.url}}" class="img-responsive" alt="">
                     </a>
                     <div class="news-info">
                         <span>{{new.newsdate}}</span>
-                        <h3><a href="news-detail.html">{{ new.title }}</a></h3>
+                        <h3><a href="{{new.get_absolute_url }}">{{ new.title }}</a></h3>
                         <p>{{ new.body }}</p>
                         <div class="author">
                             <img src="{{ new.docname.doc_pic.url }}" class="img-responsive" alt="">
