@@ -14,6 +14,17 @@
                     <h2>Latest News</h2>
                 </div>
             </div>
+            {% for username in doctors.username %}
+            {% if username != user.username %}
+            <input type="submit" value="submit">
+            {% else %}
+            <p>In Python, a dictionary is a set of unordered items stored as key-value pairs. Let’s consider a
+                dictionary called muon_particle, which holds information about the muon. The dictionary consists of
+                three keys, name, mass, and charge. Each key has a respective value, written to the right side of the
+                key and separated by a colon.</p>
+            {% endif %}
+
+            {% endfor %}
             {% for new in news_list %}
             <div class="col-md-4 col-sm-6">
                 <!-- NEWS THUMB -->
