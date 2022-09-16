@@ -5,6 +5,10 @@ from .forms import AppointmentForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
+from datetime import date
+today = date.today()
+from datetime import datetime
+now = datetime.now()
 
 class MakeAppointment(LoginRequiredMixin, CreateView):
     model = Appointment
